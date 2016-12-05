@@ -1,3 +1,21 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <div class="row">
+    <div id="banner" class="">
+      <div class="col-xs-12 page-header">
+        <h2>Need music? Search artist.</h2>
+        <input type="text" (keyup)="searchArtist(searchQuery)" [(ngModel)]="searchQuery" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="artists != 0 && artists != undefined">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Artists</h3>
+        <div class="list-group">
+          <a *ngFor="let artist of artists" class="list-group-item artist__link" href="{{ artist.url }}" target="__blank">{{ artist.name }}</a>
+        </div>
+    </div>
+  </div>
+</div>

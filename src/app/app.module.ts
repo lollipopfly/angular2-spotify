@@ -11,6 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
+// SERVICES
+import { LastfmService } from './services/lastfm.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,7 @@ import { ContactComponent } from './contact/contact.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LastfmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
