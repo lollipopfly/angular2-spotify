@@ -1,0 +1,29 @@
+.artist__album__item {
+  display: inline-block;
+  font-size: 0;
+  width: 32%;
+  margin-right: 2%;
+  vertical-align: top;
+}
+.artist__album__item:nth-child(3n+1) {
+  margin-right: 0;
+}
+.artist__album__item__img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.artist__album__item__name {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #c7c7c7;
+  text-align: center;
+}
+.artist__album__item__detail {
+  border-radius: 10px;
+  display: inline-block;
+  padding: 15px;
+  color: #c7c7c7;
+  font-size: 16px;
+  cursor: pointer;
+  background: #707070;
+}

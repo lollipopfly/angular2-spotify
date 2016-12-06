@@ -13,6 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 
 // SERVICES
 import { LastfmService } from './services/lastfm.service';
+import { ArtistComponent } from './artist/artist.component';
+import { AlbumComponent } from './album/album.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { LastfmService } from './services/lastfm.service';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,

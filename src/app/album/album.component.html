@@ -1,0 +1,23 @@
+<div *ngIf="album" class="container">
+  <div class="row album__top">
+    <div id="banner">
+      <div class="col-xs-4">
+        <img class="album__top__img" *ngIf="album.image" [src]="album.image[3]['#text']">
+      </div>
+      <div class="col-xs-8">
+        <div class="album__artist__name">{{ album.artist }}</div>
+        <div class="album__name">{{ album.name }}</div>
+        <a class="btn btn-primary" href="{{ album.url }" target="__blank">
+          View in LastFm
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="album.tracks">
+    <div class="list-group-item album__track" *ngFor="let track of album.tracks.track">
+      <div class="album__track__name">{{ track.name }} - {{ track.duration }}</div>
+      <a href="{{ track.url }}" target="__blank">Preview track</a>
+    </div>
+  </div>
+</div>

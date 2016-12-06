@@ -1,0 +1,21 @@
+<div class="container" *ngIf="artist">
+  <div class="row">
+    <div id="banner">
+      <div class="col-xs-12 page-header">
+        <h2>{{ artist.artist }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="albums">
+  <div class="row">
+    <div class="artist__album__item panel panel-default" *ngFor="let album of albums">
+      <div class="panel-body text-center">
+        <img class="artist__album__item__img" [src]="album.image[2]['#text']">
+        <div class="artist__album__item__name">{{ album.name }}</div>
+        <a  [routerLink]="['/album', artist.artist, album.name]" class="artist__album__item__detail">Album details</a>
+      </div>
+    </div>
+  </div>
+</div>
